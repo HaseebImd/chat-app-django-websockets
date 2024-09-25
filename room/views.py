@@ -17,4 +17,3 @@ def room(request, slug):
 
     return render(request, 'room/room.html', {'room': room, 'messages': messages})
 
-# Testing
