@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 from .models import Room, Message
 
+
 @login_required
 def rooms(request):
     rooms = Room.objects.all()
@@ -15,3 +16,5 @@ def room(request, slug):
     messages = Message.objects.filter(room=room)[:25]
 
     return render(request, 'room/room.html', {'room': room, 'messages': messages})
+
+# Testing
